@@ -71,3 +71,18 @@ public class ClassName extends JRule {
 	
 }
 ```
+### 4. Use the rule to validate a method
+To validate parameters in the method signature just need annotate a method with a jRule annotation and to specify the group of rules to execute.
+```java
+@Service("classService")
+public class ClassServiceImpl implements ClassService {
+
+	@ExecuteRule(ruleClass = { NotNullValuesRule.class })
+	@Override
+	public String methodToExecute(String valueOne, String valueTwo) {
+
+		return valueOne + " " + valueTwo;
+	}
+}
+```
+When NotNullValuesRule is a jRule class
