@@ -29,11 +29,7 @@ You can find the complete manual to configure and use jRules at [wiki page](http
 
 #### Clone the src and compile
 1. Before, you need git and maven in your system (if you don't have it pls google how to install git and maven).  
-2. After install, in a console type
-```console
-git clone https://github.com/joeldelvalle/jRules.git
-```
-3. Then go to downloaded src path and write:  
-```console mvn clean install ```
+2. After install, in a console type:  ```console  git clone https://github.com/joeldelvalle/jRules.git ```
+3. Then go to downloaded src path and write:  ```console mvn clean install ```
 4. When the compilation is finished, go to target and use the jrules-1.0.0-SNAPSHOT.jar
 
