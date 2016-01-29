@@ -25,3 +25,8 @@ You can find the complete manual to configure and use jRules at [wiki page](http
 
 ## Quick start
 
+#### 1. Obtain jRules jar for your project
+
+Clone the src and compile
+
+
