@@ -85,4 +85,4 @@ public class ClassServiceImpl implements ClassService {
 	}
 }
 ```
-When NotNullValuesRule is a jRule class
+When **NotNullValuesRule** is a jRule class
