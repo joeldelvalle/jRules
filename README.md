@@ -27,10 +27,47 @@ You can find the complete manual to configure and use jRules at [wiki page](http
 
 ### 1. Obtain jRules jar for your project
 
-#### Clone the src and compile
+##### Clone the src and compile
 1. Before, you need git and maven in your system (if you don't have it pls google how to install git and maven).  
 2. After install, in a console type:  ``` git clone https://github.com/joeldelvalle/jRules.git ```
 3. Then go to downloaded src path and write:  ```mvn clean install ```
 4. When the compilation is finished, go to target and use the jrules-1.0.0-SNAPSHOT.jar
 
 ### 2. Configure web.xml file
+First you need to add jRules beans configuration in your webapp context.  For example:
+```xml
+<context-param>
+  <param-name>contextConfigLocation</param-name>
+  <param-value>classpath*:ar/com/jrules/core/config/jRulesConfig.xml</param-value>
+</context-param>
+<listener>
+  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+``` 
+
+Then, add a listener of jRules, we recommend add this line at the end of all project's listeners
+```xml
+<listener>
+  <listener-class>ar.com.jrules.core.listener.JRuleListener</listener-class>
+</listener>
+```
+
+### 3. Create a jRule
+Just need to extend a Jrule's abstract class and implement the two methods requested.
+```java
+public class ClassName extends JRule {
+
+	@Override
+	public RuleResponse execute(JRuleEvaluateParameters jRuleEvaluateParameters) throws JRuleException {
+		 // this method has a logic of rule.
+	}
+
+	@Override
+	public int getRuleOrder() {
+		   // this method gives the priority to the rule, when it is inside a group
+		éste método se encarga de darle prioridad a la rule cuando esta dentro de un grupo.
+		return 1;
+	}
+	
+}
+```
