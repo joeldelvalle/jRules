@@ -15,6 +15,9 @@ In this first version, jRules is based on spring, for this reason all the annota
 
 ## How use it?
 Use jRules is very easy!  You just need to follow these four steps.
-
+1. Obtain jRules jar for your project, import the project from maven repository or clone the src and compile the project using maven
+2. Configure project's web.xml file
+3. Create a jRules
+4. Annotate with jRules annotation the method to test
 
 [WikiPage](https://github.com/joeldelvalle/jRules/wiki)
