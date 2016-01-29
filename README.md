@@ -86,3 +86,39 @@ public class ClassServiceImpl implements ClassService {
 }
 ```
 When **NotNullValuesRule** is a jRule class
+
+
+## Technologies
+* Java version:	1.6.0_45
+* Dependecies
+```xml
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-context</artifactId>
+  <version>3.2.1.RELEASE</version>
+</dependency>
+
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-web</artifactId>
+  <version>3.2.1.RELEASE</version>
+</dependency>
+
+<dependency>
+  <groupId>org.aspectj</groupId>
+  <artifactId>aspectjrt</artifactId>
+  <version>1.6.11</version>
+</dependency>
+
+<dependency>
+  <groupId>org.aspectj</groupId>
+  <artifactId>aspectjweaver</artifactId>
+  <version>1.6.11</version>
+</dependency>
+
+<dependency>
+  <groupId>log4j</groupId>
+  <artifactId>log4j</artifactId>
+  <version>1.2.16</version>
+</dependency>
+```
